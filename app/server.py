@@ -11,7 +11,7 @@ from starlette.staticfiles import StaticFiles
 
 #export_file_url = 'https://www.dropbox.com/s/6bgq8t6yextloqp/export.pkl?raw=1'
 #export_file_name = 'export.pkl'
-export_file_url = 'https://docs.google.com/uc?export=download&id=1VKGNI916BO6u_YCSSSbs8ey-8yUS8cK8'
+export_file_url = 'https://docs.google.com/uc?export=download&id=1mr2_Yf0htJX0BbwDSD-3TLd4Tzj4hUkU'
 export_file_name = 'fine_tuned.pkl'
 
 classes = ['black', 'grizzly', 'teddys']
