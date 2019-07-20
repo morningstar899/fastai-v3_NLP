@@ -55,14 +55,23 @@ async def homepage(request):
     return HTMLResponse(html_file.open().read())
 
 
+#@app.route('/analyze', methods=['POST'])
+#async def analyze(request):
+#    img_data = await request.form()
+#    img_bytes = await (img_data['file'].read())
+#    img = open_image(BytesIO(img_bytes))
+#    prediction = learn.predict(img)[0]
+#    return JSONResponse({'result': str(prediction)})
 @app.route('/analyze', methods=['POST'])
 async def analyze(request):
-    img_data = await request.form()
-    img_bytes = await (img_data['file'].read())
-    img = open_image(BytesIO(img_bytes))
-    prediction = learn.predict(img)[0]
-    return JSONResponse({'result': str(prediction)})
-
+    data = await request.form()
+    content = data['content']
+    prediction = learn.predict(content)[2]
+#    reliability = prediction[7]-(prediction[6]*prediction[0]) - prediction[0] - prediction[4] - prediction[5] - prediction[8] - (prediction[1]-prediction[11])
+#    ReliabilityScore = ((reliability.item())*50)+50
+#    ReliabilityScore = int(ReliabilityScore)
+#    return JSONResponse({'result': ReliabilityScore})
+return JSONResponse({'result': prediction})
 
 if __name__ == '__main__':
     if 'serve' in sys.argv:
