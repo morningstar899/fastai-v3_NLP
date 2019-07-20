@@ -12,15 +12,16 @@
       Use images of <strong>teddy</strong> bears, <strong>black</strong> bears, <strong>grizzly</strong> bears, or
       all three!
     </p>
-    <div class='content'>
-      <div class='no-display'>
-        <input id='file-input'
-               class='no-display'
-               type='file'
-               name='file'
-               accept='image/*'
-               onchange='showPicked(this)'>
-      </div>
+
+<div class='content'>
+    <textarea id="content-upload" cols="85" rows="15"></textarea>
+    <div class='analyze'>
+        <button id='analyze-button' class='analyze-button' type='button' onclick='analyze()'>Analyze</button>
+    </div>
+    <div class='result-label'>
+        <label id='result-label'></label>
+    </div>
+</div>
       <button class='choose-file-button' type='button' onclick='showPicker()'>Select Image</button>
       <div class='upload-label'>
         <label id='upload-label'>No file chosen</label>
