@@ -3,6 +3,7 @@ import asyncio
 import uvicorn
 from fastai import *
 from fastai.vision import *
+from fastai.text import *       #Add for NLP
 from io import BytesIO
 from starlette.applications import Starlette
 from starlette.middleware.cors import CORSMiddleware
