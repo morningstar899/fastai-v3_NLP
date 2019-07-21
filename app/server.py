@@ -1,14 +1,12 @@
-import aiohttp
-import asyncio
-import uvicorn
-from fastai import *
-#from fastai.vision import *
-from fastai.text import *       #Add for NLP
-from io import BytesIO
 from starlette.applications import Starlette
-from starlette.middleware.cors import CORSMiddleware
 from starlette.responses import HTMLResponse, JSONResponse
 from starlette.staticfiles import StaticFiles
+from starlette.middleware.cors import CORSMiddleware
+import uvicorn, aiohttp, asyncio
+from io import StringIO
+
+from fastai import *
+from fastai.text import *
 
 #export_file_url = 'https://www.dropbox.com/s/6bgq8t6yextloqp/export.pkl?raw=1'
 #export_file_name = 'export.pkl'
