@@ -71,7 +71,8 @@ async def analyze(request):
     data = await request.form()
     content = data['content']
 #   prediction = learn.predict(content)[0]
-    prediction = learn.predict((content)[0], 40, temperature=0.75)
+#   prediction = learn.predict((content)[0], 40, temperature=0.75)
+    prediction = print("\n".join(learn.predict((content)[0], 40, temperature=0.75) for _ in range(2)))
     return JSONResponse({'Review Rating': str(prediction)})
 
 if __name__ == '__main__':
