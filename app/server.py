@@ -10,13 +10,30 @@ from fastai.text import *
 
 export_file_url = 'https://www.googleapis.com/drive/v3/files/18BBHRLg3dw9rX4kgvCNWmL4pMSwR4Jcc?alt=media&key=AIzaSyBVEqpZp8wHfzX7a7k9BM1vYaqwO68IiQo'
 export_file_name = 'clas_third.pkl'
-
 classes = ['negative', 'positive']
 path = Path(__file__).parent
 
 app = Starlette()
 app.add_middleware(CORSMiddleware, allow_origins=['*'], allow_headers=['X-Requested-With', 'Content-Type'])
 app.mount('/static', StaticFiles(directory='app/static'))
+
+# PSEUDOCODE:
+# func download_file
+# Check to see if destination of to-be-downloaded file exists
+# if it does, communicate with server and wait for a response
+# Check to see if specified .pkl (extension) file exists in the directory
+# if file does not exist, download it at specified destination
+# read data from specified .pkl file
+# 
+# func setup_learner
+# if download_file worked, load up the .pkl file containing weights and activations
+### Note: In this case weights and activations are being used for the computer to know 
+### how important a combination of words is. Ex: It was a hot _ . 
+### "It was a hot 'day'" would rank higher and thus have a higher weight 
+### than "It was a hot 'highly'"
+# if download_file did not work, return one of two errors
+# 1) if model (aforementioned learner) was trained using a CPU, return a specific error
+# 2) all other errors, return a generic error
 
 
 async def download_file(url, dest):
