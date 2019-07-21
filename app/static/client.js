@@ -34,8 +34,14 @@ function analyze() {
     el("analyze-button").innerHTML = "Analyze";
   };
 
-  var fileData = new FormData();
-  fileData.append("file", uploadFiles[0]);
-  xhr.send(fileData);
+    var fileData = {
+        "textField": uploadFiles.value
+    };
+    
+    // fileData.append('textField', uploadFiles.value);
+    console.log("fileData:", fileData);
+    console.log("uploadFiles", uploadFiles);
+    console.log("uploadFiles.value:", uploadFiles.value);
+    xhr.send(JSON.stringify(fileData));
 }
 
