@@ -49,9 +49,9 @@ loop.close()
 
 
 @app.route('/')
-async def homepage(request):
-    html_file = path / 'view' / 'index.html'
-    return HTMLResponse(html_file.open().read())
+def index(request):
+    html = path/'view'/'index.html'
+    return HTMLResponse(html.open().read())
 
 @app.route('/analyze', methods=['POST'])
 async def analyze(request):
