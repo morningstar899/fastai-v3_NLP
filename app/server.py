@@ -71,8 +71,7 @@ async def analyze(request):
     data = await request.form()
     content = data['content']
     prediction = learn.predict(content)[0]
-#    return JSONResponse({'Review Rating': str(prediction)})
-    return JSONResponse({'result': str(prediction)})
+    return JSONResponse({'Review Rating': str(prediction)})
 
 if __name__ == '__main__':
     if 'serve' in sys.argv:
