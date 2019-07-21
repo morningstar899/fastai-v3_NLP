@@ -37,7 +37,11 @@ app.mount('/static', StaticFiles(directory='app/static'))
 
 
 async def download_file(url, dest):
+    # early exit if destination exists
     if dest.exists(): return
+    
+    # section for downloading the file. In this case will be used to download the weights (.pkl) 
+    # for the model
     async with aiohttp.ClientSession() as session:
         async with session.get(url) as response:
             data = await response.read()
