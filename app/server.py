@@ -47,7 +47,6 @@ tasks = [asyncio.ensure_future(setup_learner())]
 learn = loop.run_until_complete(asyncio.gather(*tasks))[0]
 loop.close()
 
-
 @app.route('/')
 def index(request):
     html = path/'view'/'index.html'
