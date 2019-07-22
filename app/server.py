@@ -11,7 +11,7 @@ from fastai.text import *
 #export_file_url = 'https://www.googleapis.com/drive/v3/files/18BBHRLg3dw9rX4kgvCNWmL4pMSwR4Jcc?alt=media&key=AIzaSyBVEqpZp8wHfzX7a7k9BM1vYaqwO68IiQo'
 export_file_url = 'https://www.googleapis.com/drive/v3/files/1WerGGfb4EO4f-NQ9lLeABXJsN0KWKCWU?alt=media&key=AIzaSyBVEqpZp8wHfzX7a7k9BM1vYaqwO68IiQo'
 #export_file_name = 'clas_third.pkl'
-#export_file_name = 'Fine_tune.pkl'
+export_file_name = 'fine_tuned.pkl'
 classes = ['negative', 'positive']
 path = Path(__file__).parent
 
