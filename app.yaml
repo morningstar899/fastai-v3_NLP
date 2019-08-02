@@ -20,5 +20,6 @@ libraries:
 - name: ssl
   version: latest
   
- entrypoint: gunicorn -b :
+ entrypoint: 
+ gunicorn -b :
  $PORT main:app
