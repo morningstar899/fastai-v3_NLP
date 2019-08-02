@@ -1,13 +1,3 @@
-runtime: python27
-api_version: 1
-threadsafe: true
-
-env_variables:
-  LANG_TAG: 'it'
-  TIMESTAMP_TZ: 'Europe/Rome'
-
-
-libraries:
-- name: ssl
-  version: latest
+runtime: custom
+env: flex
   
