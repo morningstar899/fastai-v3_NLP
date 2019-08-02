@@ -1,4 +1,5 @@
 runtime: python27
+entrypoint: gunicorn -b :$PORT main:app
 api_version: 1
 threadsafe: true
 
@@ -20,6 +21,3 @@ libraries:
 - name: ssl
   version: latest
   
- entrypoint: 
- gunicorn -b :
- $PORT main:app
