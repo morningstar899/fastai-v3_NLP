@@ -8,7 +8,7 @@ from io import StringIO
 from fastai import *
 from fastai.text import *
 
-export_file_url = 'https://www.googleapis.com/drive/v3/files/18BBHRLg3dw9rX4kgvCNWmL4pMSwR4Jcc?alt=media&key=AIzaSyBVEqpZp8wHfzX7a7k9BM1vYaqwO68IiQo'
+export_file_url = 'https://www.googleapis.com/drive/v3/files/1mr2_Yf0htJX0BbwDSD-3TLd4Tzj4hUkU?alt=media&key=AIzaSyBVEqpZp8wHfzX7a7k9BM1vYaqwO68IiQo'
 #export_file_url = 'https://www.googleapis.com/drive/v3/files/1yqKicc3x8yA9iyBxgC5mJXqCd4jW64P5?alt=media&key=AIzaSyBVEqpZp8wHfzX7a7k9BM1vYaqwO68IiQo'
 #export_file_url = 'https://www.googleapis.com/drive/v3/files/1s3r9LySZuxZd9bBmEgy2ri2C5Iu_Mso1?alt=media&key=AIzaSyBVEqpZp8wHfzX7a7k9BM1vYaqwO68IiQo'
 export_file_name = 'fine_tuned.pkl'
@@ -82,8 +82,8 @@ def index(request):
 async def analyze(request):
     data = await request.json()
     content = data['textField']
-    prediction = learn.predict(content, 90)
-#   prediction = learn.predict(content, 90, temperature=0.75)
+
+   prediction = learn.predict(content, 90, temperature=0.75)
     return JSONResponse({'result': str(prediction)})
 
 if __name__ == '__main__':
