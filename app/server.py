@@ -9,11 +9,10 @@ from fastai import *
 from fastai.text import *
 
 #export_file_url = 'https://www.googleapis.com/drive/v3/files/1mr2_Yf0htJX0BbwDSD-3TLd4Tzj4hUkU?alt=media&key=AIzaSyBVEqpZp8wHfzX7a7k9BM1vYaqwO68IiQo'
-#export_file_url = 'https://www.googleapis.com/drive/v3/files/1yqKicc3x8yA9iyBxgC5mJXqCd4jW64P5?alt=media&key=AIzaSyBVEqpZp8wHfzX7a7k9BM1vYaqwO68IiQo'
-export_file_url = 'https://www.googleapis.com/drive/v3/files/1s3r9LySZuxZd9bBmEgy2ri2C5Iu_Mso1?alt=media&key=AIzaSyBVEqpZp8wHfzX7a7k9BM1vYaqwO68IiQo'
+export_file_url = 'https://www.googleapis.com/drive/v3/files/1xUku3breeGz1-f3MlmlFwq58pbJoLuVR?alt=media&key=AIzaSyBVEqpZp8wHfzX7a7k9BM1vYaqwO68IiQo'
 #export_file_name = 'fine_tuned.pkl'
-#export_file_name = 'fine_tuned_JOB_DUTIES.pkl'
-export_file_name = 'fine_tuned_requirements.pkl'
+export_file_name = 'fine_tuned_JOB_DUTIES.pkl'
+#export_file_name = 'fine_tuned_requirements.pkl'
 classes = ['negative', 'positive']
 path = Path(__file__).parent
 
