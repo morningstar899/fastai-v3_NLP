@@ -82,7 +82,7 @@ async def analyze(request):
     data = await request.json()
     content = data['textField']
 
-    prediction = learn.predict(content, 70, temperature=0.75)
+    prediction = learn.predict(content, 65, temperature=0.75)
     #prediction = print("\n".join(learn.predict(content, 90, temperature=0.75) for _ in range(1)))
     return JSONResponse({'result': str(prediction)})
 
