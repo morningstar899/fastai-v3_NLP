@@ -10,7 +10,7 @@ from fastai.text import *
 
 #export_file_url = 'https://www.googleapis.com/drive/v3/files/1mr2_Yf0htJX0BbwDSD-3TLd4Tzj4hUkU?alt=media&key=AIzaSyBVEqpZp8wHfzX7a7k9BM1vYaqwO68IiQo'
 #export_file_url = 'https://www.googleapis.com/drive/v3/files/1xUku3breeGz1-f3MlmlFwq58pbJoLuVR?alt=media&key=AIzaSyBVEqpZp8wHfzX7a7k9BM1vYaqwO68IiQo'
-export_file_url = 'https://drive.google.com/uc?export=download&id=1fMnetfWF1EK7RXCvK1vRQKnHksZGgSMd'
+export_file_url = 'https://drive.google.com/uc?export=download&id=1lzUZCxI5sCrNw_DCibmHhppVnS1B6ZTF'
 #export_file_name = 'fine_tuned.pkl'
 #export_file_name = 'fine_tuned_JOB_DUTIES.pkl'
 export_file_name = 'fine_tuned_eJOB_ads.pkl'
