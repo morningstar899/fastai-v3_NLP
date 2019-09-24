@@ -8,7 +8,7 @@ from io import StringIO
 from fastai import *
 from fastai.text import *
 
-export_file_url = 'https://www.googleapis.com/drive/v3/files/1mr2_Yf0htJX0BbwDSD-3TLd4Tzj4hUkU?alt=media&key=AIzaSyBVEqpZp8wHfzX7a7k9BM1vYaqwO68IiQo'
+export_file_url = 'https://drive.google.com/uc?export=download&id=1DVEO3fbsnpEoDnquEhbn1Y9O6Pd36NjQ'
 #export_file_url = 'https://www.googleapis.com/drive/v3/files/1xUku3breeGz1-f3MlmlFwq58pbJoLuVR?alt=media&key=AIzaSyBVEqpZp8wHfzX7a7k9BM1vYaqwO68IiQo'
 #export_file_url = 'https://drive.google.com/uc?export=download&id=1uteRlmYYOp0QxSAWYzFgfzT8WQnxP-iw'
 export_file_name = 'fine_tuned.pkl'
